@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WaveitWebPlayer", "WaveitWebPlayer\WaveitWebPlayer.vcproj", "{6B1D8836-5525-4A97-865C-080EDBC5E9A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DLLDebug|Win32 = DLLDebug|Win32
+		DLLRelease|Win32 = DLLRelease|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.Debug|Win32.Build.0 = Debug|Win32
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.DLLDebug|Win32.ActiveCfg = DLLDebug|Win32
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.DLLDebug|Win32.Build.0 = DLLDebug|Win32
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.DLLRelease|Win32.ActiveCfg = DLLRelease|Win32
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.DLLRelease|Win32.Build.0 = DLLRelease|Win32
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.Release|Win32.ActiveCfg = Release|Win32
+		{6B1D8836-5525-4A97-865C-080EDBC5E9A1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

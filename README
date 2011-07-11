@@ -1,0 +1,125 @@
+Waveit Web Player
+
+Download SWT for your OS >>>>>>> http://www.eclipse.org/swt/
+
+Copy swt.jar to WaveitLauncher folder;
+
+On Eclipse, import to the workspace the project "Waveit Launcher", located on WaveitLauncher folder.
+
+Copy OgreMain.dll and RenderSystem_GL.dll to WaveitLauncher\bin folder;
+
+On VC++, compile the project. If everything goes right, it will put the WaveitWebPlayer.dll on WaveitLauncher\bin.
+
+Go to (OGRE_HOME)\media\packs and copy SdkTrays.zip and Sinbad.zip to WaveitLauncher\bin.
+
+On Eclipse, press Run. You should see Sinbad dancing, you can use mouse to interact;
+
+
+Now that you did a sucessfull test on Eclipse and everything is working ok, it's time to embed you application on a Webpage.
+
+First of All, it's mandatory that every Applet that uses JNI has digitally signed its JAR files. So we will have to do that. But first, let's build our JAR files.
+
+Go to WaveitLauncher\bin and run the following commands:
+
+jar cfv waveit.jar *.zip *.class
+
+This command will create a JAR file called waveit.jar. That JAR file will contain all your ZIP and CLASS files.
+
+jar cfv waveitWin32.jar *.dll
+
+This command will create a JAR file called waveitWin32.jar. That JAR file will contain all your DLL's.
+
+Now create a folder called "final" (or whatever you want) in the same directory (WaveitLauncher\bin). Paste the swt.jar on "final" folder. The swt.jar file is located in WaveitLauncher folder.
+
+Paste waveit.jar and waveit.Win32.jar on "final" folder too.
+
+Ok, now you have 3 files on the "final" folder:
+
+waveit.jar
+waveitWin32.jar
+swt.jar
+
+We have to create a digital certificate.
+
+
+cd final
+keytool -genkey -keystore key -alias ksalias
+keytool -selfcert -alias ksalias -keystore key
+
+You will be prompted for a password and some other infos (you can press ENTER on these infos). At the last prompt, type "yes" to confirm.
+
+Now let's sign the JAR files!
+
+jarsigner.exe -keystore key -storepass yourPassword waveit.jar ksalias
+jarsigner.exe -keystore key -storepass yourPassword waveitWin32.jar ksalias
+jarsigner.exe -keystore key -storepass yourPassword swt.jar ksalias
+
+
+Create a text file called "waveit.jnlp" and paste the XML script below:
+
+<?xml version="1.0" encoding="UTF-8"?>
+	<jnlp href="waveit.jnlp">
+		<information>
+			<title>Waveit Web Player</title>
+			<vendor>Waveit Technology</vendor>
+			<offline-allowed/> 
+		</information>
+
+		<resources>
+			<j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se" />
+			<jar href="waveit.jar" main="true" />
+		</resources>
+
+		<resources os="Windows">
+			<nativelib href="swt.jar"/>
+			<nativelib href="waveitWin32.jar"/>
+		</resources>
+
+	<applet-desc name="Waveit Web Player" main-class="Launcher" width="1280" height="720">
+	</applet-desc>
+
+	<security>
+		<all-permissions/>
+	</security>
+</jnlp>
+
+
+
+
+
+We are almost there! All you have to do now is to create a webpage to embed your application!
+
+
+Create a text file called "webpage.html" and open it in a text editor. Paste the following:
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>Waveit Web Player</title>
+	</head>
+
+
+	<body style="margin: 0">
+		<script src="http://www.java.com/js/deployJava.js"></script>
+		<script> 
+   			var attributes = {code:'Launcher.class',  width:800, height:600, archive:'waveit.jar'} ; 
+	   		var parameters = {jnlp_href: 'waveit.jnlp', separate_jvm: 'true'} ; 
+   			deployJava.runApplet(attributes, parameters, '1.6'); 
+		</script>
+	</body>
+
+</html>
+
+
+
+
+Now open that page in a browser and play! To share your application, host the JAR files, the JNLP file and your webpage somewhere.
+
+Have fun.
