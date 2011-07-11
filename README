@@ -85,8 +85,9 @@ jarsigner.exe -keystore key -storepass yourPassword waveit.jar ksalias
 jarsigner.exe -keystore key -storepass yourPassword waveitWin32.jar ksalias
 jarsigner.exe -keystore key -storepass yourPassword swt.jar ksalias
 
+Ok. Now your JAR files are signed.
 
-Create a text file called "waveit.jnlp" and paste the XML script below:
+On the "final" folder, create a text file called "waveit.jnlp" and paste the XML script below:
 
 <?xml version="1.0" encoding="UTF-8"?>
 	<jnlp href="waveit.jnlp">
@@ -121,7 +122,7 @@ Create a text file called "waveit.jnlp" and paste the XML script below:
 We are almost there! All you have to do now is to create a webpage to embed your application!
 
 
-Create a text file called "webpage.html" and open it in a text editor. Paste the following:
+Still on the "final" folder, create a text file called "webpage.html" and open it in a text editor. Paste the following:
 
 
 
