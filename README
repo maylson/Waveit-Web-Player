@@ -43,7 +43,7 @@ In order to use Waveit Web Player on your Ogre app, download the project and fol
 
 - Go to (OGRE_HOME)\media\packs and copy SdkTrays.zip and Sinbad.zip to WaveitLauncher\bin.
 
-O- n Eclipse, press Run. You should see Sinbad dancing and you can use mouse to interact;
+On Eclipse, press Run. You should see Sinbad dancing and you can use mouse to interact;
 
 
 Now that you did a sucessfull test on Eclipse and everything is working ok, it's time to embed you application on a Webpage.
@@ -154,3 +154,13 @@ Create a text file called "webpage.html" and open it in a text editor. Paste the
 Now open that page in a browser and play! To share your application, host the JAR files, the JNLP file and your webpage somewhere.
 
 Have fun.
+
+If you use Waveit Web Player on your project, I would be glad to see it in action on-line! Please, post on the our Thread at Ogre Forums:
+http://ogre3d.org/forums/viewtopic.php?f=11&t=63648
+
+Question?
+Ask here >>>> http://ogre3d.org/forums/viewtopic.php?f=11&t=63648
+
+
+Maylson Gonçalves
+Waveit Technology
