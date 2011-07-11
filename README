@@ -1,18 +1,49 @@
-Waveit Web Player
+Copyright (c) 2011 Waveit Technology
 
-Download SWT for your OS >>>>>>> http://www.eclipse.org/swt/
+Permission is hereby granted, free of charge, to any person obtaining a copy  
+of this software and associated documentation files (the "Software"), to deal 
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     
+copies of the Software, and to permit persons to whom the Software is         
+furnished to do so, subject to the following conditions:                      
 
-Copy swt.jar to WaveitLauncher folder;
+The above copyright notice and this permission notice shall be included in    
+all copies or substantial portions of the Software.                           
 
-On Eclipse, import to the workspace the project "Waveit Launcher", located on WaveitLauncher folder.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN     
+THE SOFTWARE.
 
-Copy OgreMain.dll and RenderSystem_GL.dll to WaveitLauncher\bin folder;
 
-On VC++, compile the project. If everything goes right, it will put the WaveitWebPlayer.dll on WaveitLauncher\bin.
 
-Go to (OGRE_HOME)\media\packs and copy SdkTrays.zip and Sinbad.zip to WaveitLauncher\bin.
 
-On Eclipse, press Run. You should see Sinbad dancing, you can use mouse to interact;
+Waveit Web Player: A web player for Ogre3D.
+
+Examples:
+http://www.waveit.com.br/webplayer
+http://www.waveit.com.br/webplayer2
+
+
+
+In order to use Waveit Web Player on your Ogre app, download the project and follow the steps below.
+
+- Download SWT for your OS >>>>>>> http://www.eclipse.org/swt/
+
+- Copy swt.jar to WaveitLauncher folder;
+
+- On Eclipse, import to the workspace the project "Waveit Launcher", located on WaveitLauncher folder.
+
+- Copy OgreMain.dll and RenderSystem_GL.dll to WaveitLauncher\bin folder;
+
+- On VC++, compile the project. If everything goes right, it will put the WaveitWebPlayer.dll on WaveitLauncher\bin.
+
+- Go to (OGRE_HOME)\media\packs and copy SdkTrays.zip and Sinbad.zip to WaveitLauncher\bin.
+
+O- n Eclipse, press Run. You should see Sinbad dancing and you can use mouse to interact;
 
 
 Now that you did a sucessfull test on Eclipse and everything is working ok, it's time to embed you application on a Webpage.
