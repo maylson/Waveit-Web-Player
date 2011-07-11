@@ -62,7 +62,7 @@ This command will create a JAR file called waveitWin32.jar. That JAR file will c
 
 Now create a folder called "final" (or whatever you want) in the same directory (WaveitLauncher\bin). Paste the swt.jar on "final" folder. The swt.jar file is located in WaveitLauncher folder.
 
-Paste waveit.jar and waveit.Win32.jar on "final" folder too.
+Paste waveit.jar and waveitWin32.jar on "final" folder too.
 
 Ok, now you have 3 files on the "final" folder:
 
